@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:resize/src/resizeUtil.dart';
 
-//Helper Widget
+/// Helper Widget to initialize [ResizeUtil]
 class Resize extends StatelessWidget {
   final Widget Function() builder;
+
+  /// base size for calculating rem [ResizeUtil.rem]
   final double baseForREM;
+
+  /// [Size] of the device
   final Size size;
+
+  /// Boolean to indicate text scaling
   final bool allowtextScaling;
 
   Resize({
