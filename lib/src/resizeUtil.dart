@@ -38,14 +38,9 @@ class ResizeUtil {
     ui = size;
     allowtextScaling = allowtextScaling;
 
-    /// Based on the Orientation of the device _screenWidth and _screenHeight will be assigned
-    if (orientation == Orientation.portrait) {
-      _screenWidth = constraints.maxWidth;
-      _screenHeight = constraints.maxHeight;
-    } else {
-      _screenWidth = constraints.maxHeight;
-      _screenHeight = constraints.maxWidth;
-    }
+    /// Sets the device _screenWidth and _screenHeight
+    _screenWidth = constraints.maxWidth;
+    _screenHeight = constraints.maxHeight;
 
     /// Based on the device's orientation and size _deviceType will be assigned
     if ((_orientation == Orientation.portrait && _screenWidth < 600) ||
@@ -71,7 +66,7 @@ class ResizeUtil {
   double get scaleH => _screenHeight / ui.height;
 
   /// Gives the scale factor for the device
-  double get scale => min(scaleW, scaleH);
+  double get scale => max(scaleW, scaleH);
 
   /// Returns text scaling factor which will be later used for font size in [ResizeUtil.scalarPixel]
   double get textScaleFactor => WidgetsBinding.instance!.window.textScaleFactor;
@@ -103,7 +98,7 @@ class ResizeUtil {
   /// Gives the current orientation of the device
   Orientation get orientation => _orientation;
 
-  /// Gives the curretn device type [ResizeUtil.deviceType]
+  /// Gives the current device type [ResizeUtil.deviceType]
   DeviceType get deviceType => _deviceType;
 }
 
