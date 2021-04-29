@@ -24,8 +24,8 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
-  resize: ^0.0.3
-
+  resize:
+    path: ../
 dev_dependencies:
   flutter_test:
     sdk: flutter
