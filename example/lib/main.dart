@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // Initialize ResizeUtil using Resize()
     return Resize(
+      allowtextScaling: true,
       builder: () {
         // print(ResizeUtil().deviceType);
         // print(ResizeUtil().orientation);
@@ -86,6 +87,7 @@ class MyApp extends StatelessWidget {
                       ),
                       child: Text(
                         "This is a button",
+                        style: TextStyle(fontSize: 15),
                       ),
                     ),
                   ),
