@@ -1,5 +1,7 @@
+import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 
 class ResizeUtil {
   /// Default size for device
@@ -42,12 +44,25 @@ class ResizeUtil {
     _screenWidth = constraints.maxWidth;
     _screenHeight = constraints.maxHeight;
 
-    /// Based on the device's orientation and size _deviceType will be assigned
-    if ((_orientation == Orientation.portrait && _screenWidth < 600) ||
-        (_orientation == Orientation.landscape && _screenHeight < 600)) {
-      _deviceType = DeviceType.Mobile;
-    } else {
-      _deviceType = DeviceType.Tablet;
+    /// Sets the device type
+    if (kIsWeb) {
+      _deviceType = DeviceType.Web;
+    } else if (Platform.isAndroid || Platform.isIOS) {
+      /// Based on the device's orientation and size _deviceType will be assigned
+      if ((_orientation == Orientation.portrait && _screenWidth < 600) ||
+          (_orientation == Orientation.landscape && _screenHeight < 600)) {
+        _deviceType = DeviceType.Mobile;
+      } else {
+        _deviceType = DeviceType.Tablet;
+      }
+    } else if (Platform.isMacOS) {
+      _deviceType = DeviceType.Mac;
+    } else if (Platform.isWindows) {
+      _deviceType = DeviceType.Windows;
+    } else if (Platform.isLinux) {
+      _deviceType = DeviceType.Linux;
+    } else if (Platform.isFuchsia) {
+      _deviceType = DeviceType.Fuchsia;
     }
 
     _base = base;
@@ -84,7 +99,7 @@ class ResizeUtil {
   double viewWidth(num input) => input * (_screenWidth / 100);
 
   /// Returns font size in rem based on the input and base size
-  double rem(num input) => input * _base;
+  double rem(num input) => input * _base * textScaleFactor;
 
   /// Gives the font size in scalarPixels based on the input
   /// If [allowtextScaling] is set true it will returns a scalable font size
@@ -106,4 +121,9 @@ class ResizeUtil {
 enum DeviceType {
   Mobile,
   Tablet,
+  Web,
+  Mac,
+  Windows,
+  Linux,
+  Fuchsia,
 }

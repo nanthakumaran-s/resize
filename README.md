@@ -78,10 +78,10 @@ return Resize(
 
 ## Other Params
 
-- `ResizeUtil.orientation` - Gives the orientation of the device.
-- `ResizeUtil.deviceType` - Gives the type as Mobile or Tablet.
-- `ResizeUtil.screenHeight` - Gives the height of the device.
-- `ResizeUtil.screenWidth` - Gives the width of the device.
+- `ResizeUtil().orientation` - Gives the orientation of the device.
+- `ResizeUtil().deviceType` - Gives the type as Mobile or Tablet.
+- `ResizeUtil().screenHeight` - Gives the height of the device.
+- `ResizeUtil().screenWidth` - Gives the width of the device.
 
 ---
 
