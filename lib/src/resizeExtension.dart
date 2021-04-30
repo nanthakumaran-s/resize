@@ -2,11 +2,7 @@ import 'package:resize/src/resizeUtil.dart';
 
 extension ResizeExtension on num {
   /// Responsive height [ResizeUtil.height]
-<<<<<<< HEAD
   double get h => ResizeUtil().height(this);
-=======
-  double get h => ResizeUtil().height(this) ;
->>>>>>> c658c6416682444bfa471d49e63e331bbe83e2cb
 
   /// Responsive width [ResizeUtil.width]
   double get w => ResizeUtil().width(this);

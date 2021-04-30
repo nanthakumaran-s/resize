@@ -83,6 +83,8 @@ return Resize(
 - `ResizeUtil().screenHeight` - Gives the height of the device.
 - `ResizeUtil().screenWidth` - Gives the width of the device.
 
+> Supported deviceTypes = Mobile, Tablet, Web, Windows, Mac, Linux, Fuchsia
+
 ---
 
 ## Responsive Height and Width

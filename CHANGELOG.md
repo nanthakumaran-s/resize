@@ -1,3 +1,8 @@
+# [0.0.4] - April 30, 2021
+
+- Bug fixes on ResizeUtil extension.
+- Added support for more device type.
+
 # [0.0.3] - April 14, 2021
 
 - Bug fixed in screen width and screen height based on orientation

@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
         // print(ResizeUtil().screenHeight);
         // print(ResizeUtil().screenWidth);
         return MaterialApp(
+          debugShowCheckedModeBanner: false,
           home: SafeArea(
             child: Scaffold(
               body: ListView(
@@ -87,7 +88,7 @@ class MyApp extends StatelessWidget {
                       ),
                       child: Text(
                         "This is a button",
-                        style: TextStyle(fontSize: 15),
+                        style: TextStyle(fontSize: 13.sp),
                       ),
                     ),
                   ),
