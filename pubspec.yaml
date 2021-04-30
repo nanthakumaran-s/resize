@@ -1,6 +1,6 @@
 name: resize
 description: A Simple Responsive Design Approach for your Flutter Apps. Includes all the necessary things to design a responsive User Interface for your Apps.
-version: 0.0.4
+version: 0.1.0
 homepage: https://github.com/nanthakumaran-s/resize
 
 environment:
@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  universal_io: ^2.0.4
 
 dev_dependencies:
   flutter_test:

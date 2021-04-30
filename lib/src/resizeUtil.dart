@@ -1,7 +1,7 @@
-import 'dart:io';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:universal_io/io.dart' show Platform;
 
 class ResizeUtil {
   /// Default size for device
