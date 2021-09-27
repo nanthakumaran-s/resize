@@ -1,3 +1,8 @@
+# [1.0.0] - September 27, 2021
+
+- Added new unit for measurement `.mv` - Max ViewPort
+- Thanks to [Silentdoer](https://github.com/Silentdoer) for contributing
+
 # [0.1.0] - April 30, 2021
 
 - Made changes to support for web.

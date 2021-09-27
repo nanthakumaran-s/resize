@@ -115,6 +115,13 @@ class ResizeUtil {
 
   /// Gives the current device type [ResizeUtil.deviceType]
   DeviceType get deviceType => _deviceType;
+
+  /// Return maximum value between [ResizeUtil.viewWidth] and [ResizeUtil.viewHeight]
+  double maxViewPort(num input) {
+    double vH = viewHeight(input);
+    double vW = viewWidth(input);
+    return max(vH, vW);
+  }
 }
 
 /// Enum to store device type

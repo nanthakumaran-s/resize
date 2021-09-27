@@ -19,6 +19,9 @@ extension ResizeExtension on num {
   /// Width referenced from device's width [ResizeUtil.viewWidth]
   double get vw => ResizeUtil().viewWidth(this);
 
+  /// Max ViewPort value of the device [ResizeUtil.maxViewPort]
+  double get mv => ResizeUtil().maxViewPort(this);
+
   /// Font size using rem [ResizeUtil.rem]
   double get rem => ResizeUtil().rem(this);
 }
