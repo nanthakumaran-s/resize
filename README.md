@@ -72,6 +72,7 @@ return Resize(
 - `.w` - Responsive Width
 - `.vh` - Height measured in percentage of screen height (As like in css)
 - `.vw` - Height measured in percentage of screen width (As like in css)
+- `.mv` - Maximum ViewPort size of the device
 - `.rem` - Font Size (As like in css). Default base set to 16.0
 - `.sp` - Responsive Font Size
 - `.r` - Radius for curved borders
@@ -116,6 +117,23 @@ By using `.vh` and `.vw`, you can refer to the size of the screen and create wid
 Container(
     height: 20.vh, // 20% of the screen height
     width: 50.vw, // 50% of the screen width
+)
+...
+```
+
+---
+
+## Max ViewPort
+
+By using `.mv`, you can get the maximum viewport size of the device.
+Internally `.mv` is `max(.vh, .vw)`
+
+```dart
+...
+Container(
+    height: 10.mv,
+    // If 10.vh is greater than 10.vw,
+    // then 10.mv is 10.vh and vice versa
 )
 ...
 ```
